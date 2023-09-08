@@ -7,7 +7,7 @@
         public DayOfWeek Current_Day { get; set; } = DateTime.UtcNow.DayOfWeek;
         public DateTime CurrentUTCTime { get; set; } = DateTime.UtcNow;
         public string Github_File_URL { get; set; } = "";
-        public string Github_Repo_URL { get; set; } = "";
+        public string Github_Repo_URL { get; set; } = "https://github.com/FortunateOmonuwa/HNGBackendStageOne";
         public int Status_Code { get; set; } = 200;
     }
 }
