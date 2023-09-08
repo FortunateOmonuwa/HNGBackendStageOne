@@ -19,7 +19,7 @@ namespace HNGBackendStageOne.Controllers
         {
             try
             {
-                if (track != _info.Track && slack_name != _info.Slack_Name)
+                if (track != _info.Track && slack_name != _info.Slack_name)
                 {
                     return BadRequest("Invalid track and / or Slack Name");
                 }
@@ -28,13 +28,13 @@ namespace HNGBackendStageOne.Controllers
 
                 var response = new
                 {
-                    _info.Slack_Name,
-                    _info.Current_Day,
-                    _info.Current_UTC_Time,
+                    _info.Slack_name,
+                    _info.Current_day,
+                    _info.Utc_time,
                     _info.Track,
-                    _info.Github_File_URL,
-                    _info.Github_Repo_URL,
-                    _info.Status_Code
+                    _info.Github_file_url,
+                    _info.Github_repo_url,
+                    _info.Status_code
                 };
 
                 return Ok(response);
