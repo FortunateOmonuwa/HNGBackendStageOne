@@ -15,11 +15,11 @@ namespace HNGBackendStageOne.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetInfo(string slackName, string track)
+        public IActionResult GetInfo(string slack_name, string track)
         {
             try
             {
-                if (track != _info.Track && slackName != _info.Slack_Name)
+                if (track != _info.Track && slack_name != _info.SlackName)
                 {
                     return BadRequest("Invalid track and / or Slack Name");
                 }
@@ -28,13 +28,13 @@ namespace HNGBackendStageOne.Controllers
 
                 var response = new
                 {
-                    _info.Slack_Name,
-                    _info.Current_Day,
+                    _info.SlackName,
+                    _info.CurrentDay,
                     _info.CurrentUTCTime,
                     _info.Track,
-                    _info.Github_File_URL,
-                    _info.Github_Repo_URL,
-                    _info.Status_Code
+                    _info.GithubFileURL,
+                    _info.GithubRepoURL,
+                    _info.StatusCode
                 };
 
                 return Ok(response);
