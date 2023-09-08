@@ -5,7 +5,7 @@ namespace HNGBackendStageOne
     public class Information
     {
         [JsonPropertyName("slack_name")]
-        public string SlackName { get; set; } = "Fortunate Omonuwa";
+        public string SlackName { get; set; } = "Fortunate_Omonuwa";
         public string Track { get; set; } = "Backend";
         [JsonPropertyName("current_day")]
         public string CurrentDay { get; set; } = DateTime.UtcNow.DayOfWeek.ToString();
