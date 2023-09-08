@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HNGBackendStageOne.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class InformationController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace HNGBackendStageOne.Controllers
         {
             try
             {
-                if (track != _info.Track && slack_name != _info.SlackName)
+                if (track != _info.Track && slack_name != _info.Slack_Name)
                 {
                     return BadRequest("Invalid track and / or Slack Name");
                 }
@@ -28,13 +28,13 @@ namespace HNGBackendStageOne.Controllers
 
                 var response = new
                 {
-                    _info.SlackName,
-                    _info.CurrentDay,
-                    _info.CurrentUTCTime,
+                    _info.Slack_Name,
+                    _info.Current_Day,
+                    _info.Current_UTC_Time,
                     _info.Track,
-                    _info.GithubFileURL,
-                    _info.GithubRepoURL,
-                    _info.StatusCode
+                    _info.Github_File_URL,
+                    _info.Github_Repo_URL,
+                    _info.Status_Code
                 };
 
                 return Ok(response);
